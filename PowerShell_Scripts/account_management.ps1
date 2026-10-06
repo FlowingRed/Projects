@@ -18,20 +18,23 @@ while ($true) {
         New-ADuser -Name $name -SamAccountName $accountName -AccountPassword $password -enable
     } elseif (initialOption -eq "3") {
         $accountName = Read-Host "Account Name"
-        Remove-ADuser -Identity $accountName1
+        Remove-ADuser -Identity $accountName
+        Write-Ouput "Account Deleted!"
     } elseif ($initialOption -eq "4") {
-        Write-Output "1. Make User Type Passwor At Logon"
+        Write-Output "1. Make User Type Password At Logon"
         Write-Output "2. Reset Password, and make user type new password at logon."
         $getResetOption = Read-Host "Select Option (1-2)"
         if ($getResetOption -eq "1") {
             $accountName = Read-Host -AsSecureString "Password"
             Set-ADuser -Identity $accountName -ChangePasswordAtLogon $true
             Get-ADuser -Identity $accountName -Properties PasswordExpired | Select-Object
+            Write-Output "New Password will be inputed at logon."
         } elseif ($getResetOption -eq "2") {
             $accountName = Read-Host "SAM Account Name"
             $password = Read-Host -AsSecureString "Password"
             Set-ADAccountPassword -Identity $accountName -Reset -NewPassword $Password
-            Get-ADuser -Identity $accountName -Properties PasswordExpired | Select-Object Name, PasswordExpired | Format-Table        
+            Get-ADuser -Identity $accountName -Properties PasswordExpired | Select-Object Name, PasswordExpired | Format-Table       
+            Write-Ouput "Password Reset and Password will be inputed at logon." 
         } else {
             Write-Ouput "Incorrect Input"
         }
