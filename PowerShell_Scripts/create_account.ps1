@@ -1,1 +1,0 @@
-New-ADuser -Name (Read-Host "Name") -SamAccountName (Read-Host "SamAccountName") -AccountPassword (Read-Host -AsSecureString "Password")
