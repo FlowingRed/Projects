@@ -13,10 +13,10 @@ The purpose of this write up is to make a PowerShell script that makes creating,
 Pick a command.
 1. The options will be written to the terminal at the start of the script
 2. Call a single variable which will get the users input from the terminal.
-3. And then an if/else statement will be nested in a while loop allowing the user to choose the options: 1. List Users, 2. Create Users, 3. Delete user, 4. rest password, and 5. exit script.
+3. And then an if/else statement will be nested in a while loop allowing the user to choose the options: 1. List User, 2. Create User, 3. Delete User, 4. Rest Password, and 5. Exit Script.
 
 ## Lessons Learned and Progress Made
-I made some typo mistakes in my script where I misspelt ‘Write-Output’ and then I forgot to add a bracket to the end of an elseif’.
+I made some typo mistakes in my script where I miss spelled ‘Write-Output’ and then I forgot to add a bracket to the end of an elseif’.
 
 ![Notepad Script Typo](./Images/image1.png)
 
@@ -44,4 +44,4 @@ Some of the current limitations/flaws of the script include but are not limited 
 * The script is written in monolithic, procedural architecture and needs to be upgraded into a modular fashion.
 
 ## Conclusion
-Consolidating the New-ADUser, Remove-ADUser, and Set-ADAccountPassword in the script reduces a considerable amount of typing for repetitive Active Directory Management tasks. Beyond efficiency improvements, testing this iteration of the script displayed a need to include  user enumeration, better error handling, and enforcing password resets at logon. The latest iteration of the script can be found at my : Link
+Consolidating the New-ADUser, Remove-ADUser, and Set-ADAccountPassword in the script reduces a considerable amount of typing for repetitive Active Directory Management tasks. Beyond efficiency improvements, testing this iteration of the script displayed a need to include  user enumeration, better error handling, and enforcing password resets at logon. The latest iteration of the script can be found in this repo it is named "account_management.ps1".
