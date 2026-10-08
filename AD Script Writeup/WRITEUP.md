@@ -18,7 +18,7 @@ Pick a command.
 ## Lessons Learned and Progress Made
 I made some typo mistakes in my script where I misspelt ‘Write-Output’ and then I forgot to add a bracket to the end of an elseif’.
 
-![Notepad Script Typo](./images/image1.png)
+![Notepad Script Typo](./Images/image1.png)
 
 ## Testing and Reviewing the First Iteration.
 Well, I tried my current script and realized that it worked but it had a few issues. Which I can improve but first let me explain.
@@ -30,11 +30,11 @@ Well, I tried my current script and realized that it worked but it had a few iss
 ## More Errors
 Looks like I did not type something correctly let me go take a look.
 
-![PowerShell Command Error](./images/image2.png)
+![PowerShell Command Error](./Images/image2.png)
 
 As you can see, I accidentally typed a space into the script
 
-![Script Space Error Highlighted](./images/image3.png)
+![Script Space Error Highlighted](./Images/image3.png)
 
 And now it’s fixed. I went ahead and added more changes to the script on my GitHub repo! I went and took the time to set it up properly.
 
