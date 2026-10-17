@@ -70,14 +70,16 @@ server:
 ```
 
 ⚠️ **Status: Draft / WIP.** This is a summary of my current understanding of the options. This document is in progress and in no way does this represent complete work.
+
 ## General
+
 - Verbosity: verbosity is set to 0 since all I want to see is errors plus I am not going to really look at the logs that often.
 
 - Interface & port: Unbound listens on IP address 127.0.0.1 on port 5335. The specificc port number does not matter. 127.0.0.1 is used because unbound does receive request from the client directly all dns request are taken after pihole processes them (allow or deny).
 
 - do-ip4, do-udp, do-tcp, etc: both tcp and udp are enabled so dns requests will actually work ipv6 is disabled because there are no ipv6 addresses devices on the local network.
+
 ## Security
 
 - Harden glue: the purpose of harden glue is to reject IP addresses outside of the responding servers own zone authority. This prevents a malicious or potentially compromised **TLD** authoritative server from stuffing in glue for a domain it has no actual authority over.
-	- The glue records is the record that points to a domain’s nameserver IP address. Said nameserver can then be quried to look up all other subdomains under that domain. (`example.com`)
-
+  - The glue records is the record that points to a domain’s nameserver IP address. Said nameserver can then be quried to look up all other subdomains under that domain. (`example.com`)
