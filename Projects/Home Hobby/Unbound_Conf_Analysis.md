@@ -1,4 +1,4 @@
-```
+```text
 server:
     verbosity: 0
     interface: 127.0.0.1
